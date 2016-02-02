@@ -222,8 +222,8 @@ $(function () {
       bottom: 0,
       left: 0,
       width: '100%',
-      padding: '10px 0 20px 0',
       font: '15px/20px courier, monospaced',
+      padding: '30px 0 30px 0',
       zIndex: 1,
       '.screen': {
         zIndex: -1,
@@ -233,7 +233,7 @@ $(function () {
         height: '100%',
         width: '150%',
         backgroundColor: '#F6EBD9',
-        opacity: 0.8
+        background: 'linear-gradient(rgba(246, 235, 217,0) 0%, rgba(246, 235, 217,1) 10px, rgba(246, 235, 217,1)) 100%',
       },
   //        height: 60,
       '.cmd, .doc': {
