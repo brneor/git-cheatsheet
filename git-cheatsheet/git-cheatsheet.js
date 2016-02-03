@@ -161,7 +161,7 @@ $(function () {
     .map(function () {
       return next(locations, currentLoc())
     })
-  
+
   var keyDownPrevLoc$ = keydown$.filter(function (e) {
     return e.keyCode == KEY_PAGE_LEFT || e.keyCode == KEY_H
   }).map(function () {
