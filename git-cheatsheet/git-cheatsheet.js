@@ -139,6 +139,22 @@ $(function () {
 
   var keydown$ = Rx.Observable.fromEvent(document, 'keydown')
 
+  /*
+   var keydownCmd$ = keydown$
+   .pluck('keyCode')
+   .map(function(k) {
+   switch(k) {
+   case KEY_PAGE_RGHT:
+   case KEY_K:
+   return 'nextLoc'
+   case KEY_PAGE_LEFT:
+   case KEY_H:
+   return 'prevLoc'
+   }
+   })
+   .subscribe(log)
+   */
+
   var keyDownNextLoc$ = keydown$.filter(function (e) {
     return e.keyCode == KEY_PAGE_RGHT || e.keyCode == KEY_L
   })
@@ -213,6 +229,31 @@ $(function () {
     document.location.reload();
   })
 
+  /*
+   Rx.Observable.create(function (observer) {
+    observer.next(detectLanguage(navigator))
+    observer.completed()
+  })
+    .map(function (lang) {
+      // Fallback to English if the language is not translated
+      return translations[lang] ? lang : 'en'
+    })
+    .subscribe(function (prevLang) {
+      lang = prevLang
+      $('[data-lang=' + lang + ']').addClass('selected')
+    })
+
+  Rx.Observable.fromEvent(document, 'click', '[data-lang]')
+    .map(function (ev) {
+      return $(ev.target).attr('data-lang')
+    })
+    .subscribe(function (newLang) {
+      lang = newLang
+      cookies.create('lang', newLang)
+      _gaq.push(['_trackEvent', 'git-cheatsheet', 'lang', newLang, null])
+      document.location.reload();
+    })
+   */
 
   // Build locations
   $.each(locations, function (i, loc) {
