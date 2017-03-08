@@ -403,7 +403,7 @@ var translations = {
       docs: {
         stash: 'Um lugar para esconder modificações enquanto você trabalha em outra coisa',
         workspace: 'Checkout local',
-        index: ' Arquivos que você quer fazer `commit`. Antes de commitar arquivos, você precisa primeiro adicioná-los ao índice.',
+        index: ' Arquivos que você quer fazer commit. Antes de commitar arquivos, você precisa adicioná-los ao índice primeiro.',
         local_repo: 'Um subdiretório chamado `.git` que contém todos os arquivos necessários do seu repositório — um esqueleto do repositório. Ramificações (branches) comuns: `master`, `dev`, `feature-x`, `bugfix-y`',
         remote_repo: 'Versões do seu projeto hospedadas na internet ou rede local, assegurando que todas as modificações feitas por você estejam disponíveis para outros desenvolvedores. O nome padrão é `origin`. Branches comuns aqui são: `master`, `shared-feature-x`, `release-y`'
       }
@@ -415,10 +415,10 @@ var translations = {
         "cmd": "status",
         "docs": "Exibe: \r• diretórios que possuem diferença entre o que está presente no índice e o commit `HEAD` atual, \r• diretórios que possuem diferenças entre o workspace e o índice, e \r• diretórios no workspace não monitorados pelo git."
       },
-      "diff": {"cmd": "diff", "docs": "Displays the differences not added to the index."},
+      "diff": {"cmd": "diff", "docs": "Exibe diferenças não adicionadas ao índice."},
       "diff x": {
         "cmd": "diff <commit ou branch>",
-        "docs": "View the changes you have in your workspace relative to the named <commit>. You can use `HEAD` to compare it with the latest commit, or a branch name to compare with the tip of a different branch"
+        "docs": "Mostra as mudanças que você tem no workspace relativas ao <commit> especificado. Você pode usar `HEAD` para comparar com o último commit, or a branch name to compare with the tip of a different branch"
       },
       "add x": {
         "cmd": "add <file... or dir...>",
